@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Personal Blog</title>
+    <link rel="icon" type="image/ico" href="20230927190920_IMG_9705.ico">
+    <link href="https://fonts.cdnfonts.com/css/rosemary" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Rosemary', sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            color: #ddd;
+            background-color: #222;
+            overflow-x: hidden;
+        }
+
+        header, footer {
+            text-align: center;
+            padding: 20px;
+            background: linear-gradient(135deg, #222, #222);
+            color: #fff;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+
+        header:hover, footer:hover {
+            background: linear-gradient(135deg, #222, #222);
+        }
+
+        header h1 {
+            font-family: 'Rosemary', sans-serif;
+            font-size: 2.5rem;
+            margin: 0;
+            transition: transform 0.3s ease, color 0.3s ease;
+        }
+
+        header h1:hover {
+            transform: translateY(-5px);
+            color: #00c6ff;
+        }
+
+        header p {
+            margin: 10px 0 0;
+            font-style: italic;
+            transition: opacity 0.3s ease;
+        }
+
+        header p:hover {
+            opacity: 0.8;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #0d5b75;
+            padding: 15px 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.3s ease;
+        }
+
+        nav:hover {
+            background-color: #007bb5;
+        }
+
+        nav ul {
+            display: flex;
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            gap: 20px;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            padding: 10px 20px;
+            transition: background-color 0.3s ease, transform 0.3s ease, color 0.3s ease;
+            border-radius: 5px;
+            font-weight: 600;
+        }
+
+        nav a:hover, nav a.active {
+            background-color: #007bb5;
+            transform: translateY(-2px);
+            color: #f9f9f9;
+        }
+
+        main {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 50px auto;
+            padding: 40px;
+            max-width: 1100px;
+            background-color: #333;
+            border-radius: 12px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease-in-out;
+        }
+
+        main:hover {
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+            transform: translateY(-10px);
+        }
+
+        article {
+            margin-bottom: 50px;
+            transition: all 0.3s ease;
+        }
+
+        article:hover {
+            transform: translateY(-5px);
+        }
+
+        article h2 {
+            color: #eee;
+            font-size: 2.2rem;
+            margin-bottom: 20px;
+            position: relative;
+            transition: color 0.3s ease, transform 0.3s ease;
+        }
+
+        article h2:hover {
+            color: #1a73e8;
+            transform: translateX(5px);
+        }
+
+        article h2::after {
+            content: '';
+            width: 50px;
+            height: 3px;
+            background-color: #1a73e8;
+            position: absolute;
+            left: 0;
+            bottom: -10px;
+            transition: width 0.3s ease;
+        }
+
+        article h2:hover::after {
+            width: 70px;
+        }
+
+        article p {
+            margin-bottom: 15px;
+            line-height: 1.8;
+            font-size: 1rem;
+            color: #bbb;
+            transition: transform 0.3s ease, opacity 0.3s ease;
+        }
+
+        article p:hover {
+            transform: translateX(5px);
+            opacity: 0.9;
+        }
+
+        article p strong {
+            color: #1a73e8;
+            transition: color 0.3s ease;
+        }
+
+        article p strong:hover {
+            color: #007bb5;
+        }
+
+        article iframe {
+            margin-top: 20px;
+            border-radius: 12px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        article iframe:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            transition: transform 0.3s ease, background-color 0.3s ease;
+        }
+
+        table:hover {
+            transform: scale(1.02);
+            background-color: #444;
+        }
+
+        table, th, td {
+            border: 1px solid #555;
+            padding: 12px;
+            text-align: left;
+            transition: background-color 0.3s ease;
+        }
+
+        th {
+            background-color: #555;
+            font-weight: 600;
+            font-size: 1.1rem;
+            color: #eee;
+            transition: background-color 0.3s ease;
+        }
+
+        th:hover {
+            background-color: #666;
+        }
+
+        tr:hover {
+            background-color: #555;
+        }
+
+        aside {
+            padding: 30px;
+            margin-top: 50px;
+            border-radius: 12px;
+            background-color: #333;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease-in-out;
+        }
+
+        aside:hover {
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+            transform: translateY(-5px);
+        }
+
+        aside h3 {
+            margin-top: 0;
+            font-size: 1.7rem;
+            color: #eee;
+            border-bottom: 2px solid #555;
+            padding-bottom: 10px;
+            transition: color 0.3s ease, border-color 0.3s ease;
+        }
+
+        aside h3:hover {
+            color: #1a73e8;
+            border-color: #1a73e8;
+        }
+
+        aside ul {
+            list-style: none;
+            padding: 0;
+            margin: 20px 0;
+            transition: transform 0.3s ease;
+        }
+
+        aside ul li {
+            margin-bottom: 10px;
+            font-size: 1rem;
+            color: #bbb;
+            transition: color 0.3s ease, transform 0.3s ease;
+        }
+
+        aside ul li:hover {
+            color: #1a73e8;
+            transform: translateX(5px);
+        }
+
+        aside form {
+            margin-top: 20px;
+        }
+
+        aside form label {
+            color: #eee;
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        aside form input[type=email] {
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #555;
+            margin-bottom: 10px;
+            width: calc(100% - 22px);
+            background-color: #444;
+            color: #eee;
+        }
+
+        aside form input[type=submit] {
+            padding: 10px;
+            border-radius: 5px;
+            border: none;
+            background-color: #1a73e8;
+            color: #fff;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        aside form input[type=submit]:hover {
+            background-color: #007bb5;
+        }
+
+        footer p {
+            margin: 10px 0;
+            font-size: 0.9rem;
+            color: #ddd;
+            transition: color 0.3s ease;
+        }
+
+        footer p:hover {
+            color: #b3e5fc;
+        }
+
+        footer a {
+            color: #fff;
+            text-decoration: none;
+            transition: color 0.3s ease, transform 0.3s ease;
+        }
+
+        footer a:hover {
+            color: #b3e5fc;
+            transform: translateY(-3px);
+        }
+
+        footer::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 50%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, #1867cf, #00c6ff);
+            opacity: 0.3;
+            transform: translateX(-50%);
+            z-index: -1;
+            border-radius: 50%;
+            animation: pulsate 3s ease-in-out infinite;
+        }
+
+        @keyframes pulsate {
+            0% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.05);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Welcome to My Personal Blog</h1>
+        <p>Exploring the world through photography, cinematography, and technology.</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#home" class="active">Home</a></li>
+            <li><a href="#about">About Me</a></li>
+            <li><a href="#blog">Blog</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <article>
+            <h2>Posts over the year</h2>
+            <p>Below is the breakdown of the posts I’ve made over the past year:</p>
+            <table>
+                <tr>
+                    <th>Category</th>
+                    <th>Posts over the year</th>
+                </tr>
+                <tr>
+                    <td>Photography & Cinematography</td>
+                    <td>378</td>
+                </tr>
+                <tr>
+                    <td>Videos [Including Reels/Short Videos]</td>
+                    <td>200</td>
+                </tr>
+            </table>
+        </article>
+
+        <article>
+            <h2>My Vision about PHOTOGRAPHY</h2>
+            <p><em><small>Posted on September 5, 2024 by Prem Jeet Ghosh</small></em></p>
+            <p><strong>Photography</strong> has always been a passion of mine, a way to capture the world through a unique lens. I began my journey with a simple camera, taking photos of everyday moments, and quickly realized it was more than just a hobby—it was my calling. Over the years, I honed my skills through <strong>study, and experimentation, exploring various genres like portrait, landscape, and street photography.</strong> With each shot, I aim to tell a story and evoke emotion. Today, I continue to challenge myself, capturing moments that inspire and resonate with others.</p>
+            <iframe width="340" height="200" src="https://www.youtube.com/embed/A9_PAcP1ufc" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </article>
+    </main>
+
+    <aside>
+        <h3>Field of Interests</h3>
+        <ul>
+            <li>Photography</li>
+            <li>Cinematography</li>
+            <li>Technology</li>
+            <li>Graphics Designing</li>
+            <li>Music Production</li>
+        </ul>
+
+        <h3>Subscribe to My Blog</h3>
+        <form action="#">
+            <label for="email">Email:</label><br>
+            <input type="email" id="email" name="email" required><br><br>
+            <input type="submit" value="Subscribe">
+        </form>
+    </aside>
+
+    <footer>
+        <p>&copy; 2024 My Personal Blog</p>
+        <p>Contact: <a href="mailto:photography100@gmail.com">photography100@gmail.com</a></p>
+    </footer>
+
+</body>
+
+</html>
