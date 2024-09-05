@@ -41,7 +41,7 @@
 
         header h1:hover {
             transform: translateY(-5px);
-            color: #00c6ff;
+            color: #fff;
         }
 
         header p {
@@ -57,7 +57,7 @@
         nav {
             display: flex;
             justify-content: center;
-            background-color: #0d5b75;
+            background-color: ##fff;
             padding: 15px 0;
             position: sticky;
             top: 0;
@@ -67,7 +67,7 @@
         }
 
         nav:hover {
-            background-color: #007bb5;
+            background-color: #000000;
         }
 
         nav ul {
@@ -88,9 +88,9 @@
         }
 
         nav a:hover, nav a.active {
-            background-color: #007bb5;
+            background-color: #fff;
             transform: translateY(-2px);
-            color: #f9f9f9;
+            color: #000000;
         }
 
         main {
@@ -129,7 +129,7 @@
         }
 
         article h2:hover {
-            color: #1a73e8;
+            color: #fff;
             transform: translateX(5px);
         }
 
@@ -137,7 +137,7 @@
             content: '';
             width: 50px;
             height: 3px;
-            background-color: #1a73e8;
+            background-color: #fff;
             position: absolute;
             left: 0;
             bottom: -10px;
@@ -162,12 +162,12 @@
         }
 
         article p strong {
-            color: #1a73e8;
+            color: #fff;
             transition: color 0.3s ease;
         }
 
         article p strong:hover {
-            color: #007bb5;
+            color: #fff;
         }
 
         article iframe {
@@ -288,7 +288,7 @@
             padding: 10px;
             border-radius: 5px;
             border: none;
-            background-color: #1a73e8;
+            background-color: #000000;
             color: #fff;
             font-weight: 600;
             cursor: pointer;
@@ -296,7 +296,7 @@
         }
 
         aside form input[type=submit]:hover {
-            background-color: #007bb5;
+            background-color: #000000;
         }
 
         footer p {
@@ -328,7 +328,7 @@
             left: 50%;
             width: 100%;
             height: 100%;
-            background: linear-gradient(135deg, #1867cf, #00c6ff);
+            background: linear-gradient(135deg, #fff, #fff);
             opacity: 0.3;
             transform: translateX(-50%);
             z-index: -1;
@@ -352,55 +352,48 @@
 
 <body>
     <header>
-        <h1>Welcome to My Personal Blog</h1>
-        <p>Exploring the world through photography, cinematography, and technology.</p>
+        <h1>Welcome to the blog of Custom ROM Development!</h1>
+        <p>Exploring the site of developing Android OS and custom ROMs.</p>
     </header>
 
     <nav>
         <ul>
-            <li><a href="#home" class="active">Home</a></li>
-            <li><a href="#about">About Me</a></li>
+            <li><a href="#Home" class="active">Home</a></li>
+            <li><a href="#About Custom ROMs">About Me</a></li>
             <li><a href="#blog">Blog</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
     </nav>
 
-    <main>
-        <article>
-            <h2>Posts over the year</h2>
-            <p>Below is the breakdown of the posts I’ve made over the past year:</p>
-            <table>
-                <tr>
-                    <th>Category</th>
-                    <th>Posts over the year</th>
-                </tr>
-                <tr>
-                    <td>Photography & Cinematography</td>
-                    <td>378</td>
-                </tr>
-                <tr>
-                    <td>Videos [Including Reels/Short Videos]</td>
-                    <td>200</td>
-                </tr>
-            </table>
-        </article>
+
 
         <article>
-            <h2>My Vision about PHOTOGRAPHY</h2>
+            <h2>What is Custom ROM development basically?</h2>
             <p><em><small>Posted on September 5, 2024 by Prem Jeet Ghosh</small></em></p>
-            <p><strong>Photography</strong> has always been a passion of mine, a way to capture the world through a unique lens. I began my journey with a simple camera, taking photos of everyday moments, and quickly realized it was more than just a hobby—it was my calling. Over the years, I honed my skills through <strong>study, and experimentation, exploring various genres like portrait, landscape, and street photography.</strong> With each shot, I aim to tell a story and evoke emotion. Today, I continue to challenge myself, capturing moments that inspire and resonate with others.</p>
-            <iframe width="340" height="200" src="https://www.youtube.com/embed/A9_PAcP1ufc" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <p>Custom ROM development is the process of creating a modified version of the Android operating system (OS) from the source code provided by Google. Custom ROMs are used to add new features and functionality to Android devices, and can be particularly useful for older phones. 
+ 
+                Here are some reasons why people use custom ROMs: 
+                 
+                Functionality: Custom ROMs can offer functionality that isn't available in the stock Android version. 
+                 
+                Customization: Custom ROMs allow users to customize many aspects of their phone. 
+                 
+                Battery life: Custom ROMs can help extend battery life by using a more stock version of Android, which is typically lighter and less burdensome on the phone's hardware. 
+                 
+                Custom ROMs can be uniquely modified versions of the OS, or they can be stock versions made available for older devices or for new devices before the vendor release date. 
+                 </p>
+                 <iframe width="560" height="315" src="https://www.youtube.com/embed/99LUjX63LhU?si=GVj4riKpwdLc7NI1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
         </article>
     </main>
 
     <aside>
-        <h3>Field of Interests</h3>
+        <h3>Some popular projects to work on!</h3>
         <ul>
-            <li>Photography</li>
-            <li>Cinematography</li>
-            <li>Technology</li>
-            <li>Graphics Designing</li>
-            <li>Music Production</li>
+            <li>Evolution X</li>
+            <li>Project Matrix</li>
+            <li>RisingOS</li>
+            <li>Pixel OS</li>
+            <li>Lineage OS</li>
         </ul>
 
         <h3>Subscribe to My Blog</h3>
@@ -413,7 +406,7 @@
 
     <footer>
         <p>&copy; 2024 My Personal Blog</p>
-        <p>Contact: <a href="mailto:photography100@gmail.com">photography100@gmail.com</a></p>
+        <p>Contact: <a href="customromsupport@gmail.com">customromsupport@gmail.com</a></p>
     </footer>
 
 </body>
